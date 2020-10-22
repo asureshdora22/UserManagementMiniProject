@@ -1,0 +1,47 @@
+server:
+  port: 5050
+spring:
+  datasource:
+    driver-class-name: org.h2.Driver
+    password: null
+    url: jdbc:h2:mem:UserDB
+    username: sa
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        format_sql: true
+        show_sql: true
+  mail:
+    host: smtp.gmail.com
+    username: asureshdora22@gmail.com
+    password: Dorasuresh@2
+    port: 587
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+          ssl:
+            trust: smtp.gmail.com
+          tls: true
+            
+ 
+   
+  mvc:
+    view:
+      prefix: /views/
+      suffix: .jsp
+      
+apps:
+  message:
+    regSuccessMSG: Your Registration Almost Completed.Please Check Your Mail to Unlock Account.
+    regErrMSG: Registation Error
+    unlockErrorMSG: Please enter correct Temporary Password
+    unlockSccMSGwithLoginLink: Your Account Is Unlocked successfully <a href=\"login\">Login Here</a>
+    forgetErrorMSG: Please Enter Valid Email
+    forgetSuccessMSG: Password Sent To Your Email
+    invalidCredentialsMSG: Invalid Credentials
+    accountLockedMSG: Your Account Is Locked
